@@ -1,0 +1,97 @@
+
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<html>
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500,600,700" rel="stylesheet">
+<!-- //web-fonts --> 
+</head>
+<body>
+	<!-- banner -->
+	<div class="main-top">
+		<nav>
+			<li><a href="{% url 'home' %}" class="active"><font color="white"><h2>HOME</h2></font></a></li>
+		</nav>
+	</div>
+<div class="video"> 
+	<div class="center-container">
+	    <div class="w3ls-agileinfo">
+<head>
+<title>student registration</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Course Registration Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Meta tag Keywords -->
+<link href="{% static 'reg-temp/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<!-- //js -->
+<!-- web-fonts -->
+			<h1> Student Registration Form </h1>
+		</div>
+		 <div class="bg-agile">
+			<h2>Enter Your details </h2>
+			<div class="login-form">	
+				<form action="{% url 'reg' %}" method="POST" enctype="multipart/form-data">
+
+					{% csrf_token %}
+					<input type="text"  name="Adms" placeholder="Admission Number" required="" />
+					<input type="text"  name="first name" placeholder="First Name" required="" />
+					<input type="text"  name="last name" placeholder="Last Name" required="" />
+
+					<font color="#ffffff">GENDER
+					<input type="radio"  name="g" value="BOY" checked /> MALE
+					<input type="radio"  name="g" value="GIRL" checked /> FEMALE</font>
+					<div class="left-agileits">
+
+
+
+
+					<input type="text"  name="year" placeholder="Year" required="" />
+
+						<select  name="stream" required="" class="form-control">
+							<option>Select Stream</option>
+							<option>B.ARCH</option>
+							<option>B.TECH</option>
+							<option>MCA</option>
+							<option>M.TECH</option>
+						</select>
+
+					<input type="text"  name="duration" placeholder="Duration" required="" />
+					<input type="email"  name="Email" placeholder="Email" required="" />
+					<input type="text"  name="house name" placeholder="House Name" required="" />
+					<input type="text"  name="location" placeholder="Location" required="" />
+					<input type="text"  name="district" placeholder="District" required="" />
+					<input type="text"  name="pin" placeholder="Pincode" required="" pattern="[1-9]{1}[0-9]{5}"/>
+					<input type="text"  name="Number" placeholder="Phone Number" required="" pattern="[9876]{1}[0-9]{9}" />
+					<input type="text"  name="p_name" placeholder="Parent Name" required="" />
+					<input type="email"  pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" name="pEmail" placeholder="Parent Email ID" required="" />
+					<input type="text"  name="uname" placeholder="usernmae" required="" />
+						<!--Minimum eight characters, at least one letter, one number and one special character:-->
+						 <label for="pass">Password (four or more characters)</label>
+					<input type="password"  name="pass" placeholder="Password" required=""  pattern=".{4,}"/><br>
+
+					<label for="img" style="color :white; ">Upload Your Image:</label>
+                    <input type="file" id="img" name="img" accept="image/*" required="">
+					<br> <br>
+					<label for="img" style="color :white; "> Upload Aadhar Card:</label>
+                    <input type="file" id="imgadhar" name="imgadhar" accept="image/*" required="">
+
+					<input type="submit" value="Submit">
+				  </form>
+			</div>	
+		</div>
+	<!-- //banner --> 
+	 <!--copyright-->
+
+	<!--//copyright-->
+	</div>	
+</div>	
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<html>
+<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<!-- //web-fonts -->
+</head>
+<body>
+<div class="main-top">
+		<nav>
+				<li><a href="{% url 'home' %}" class="active"><font color="white"><h2>HOME</h2></font></a></li>
+		</nav>
+	</div>
+	<!-- banner -->
+	<div class="layer">
+<div class="video"> 
+	<div class="center-container">
+	    <div class="w3ls-agileinfo">
+<head>
+<title>hostel registration</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Course Registration Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Meta tag Keywords -->
+<link href="{% static 'hreg-temp/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<!-- //js -->
+<!-- web-fonts -->
+			<h1> Hostel Registration Form </h1>
+		</div>
+		 <div class="bg-agile">
+			<h2>Enter Hostel details </h2>
+			<div class="login-form">	
+				<form action="{% url 'hreg' %}" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<input type="text"  name="hname" placeholder="hostel name" required="" />
+					<input type="text"  name="bnumber" placeholder="building number" required="" />
+					<input type="text"  name="location" placeholder="location" required="" />
+					<input type="email"  pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"   name="Email" placeholder="Email" required="" />
+					<input type="text"  name="cnumber" placeholder="contact number" required="" pattern="[9876]{1}[0-9]{9}"  />
+					<input type="text"  name="wname" placeholder="warden name" required="" />
+					<font color="#ffffff">Hostel Type
+					<input type="radio"  name="ht" value="BOYS" checked /> BOYS
+					<input type="radio"  name="ht" value="GIRLS" checked /> GIRLS</font>
+					<div class="left-agileits">
+						<input type="text"  name="rooms" placeholder="no of rooms" required="" />
+						<input type="text"  name="floors" placeholder="no of floors" required="" />
+					</div>
+					<input type="text"  name="rent" placeholder="rent" required="" />
+					<input type="text"  name="uname" placeholder="username" required="" />
+					    <label for="pass">Password (four or more characters)</label>
+					<input type="text"  name="pass" placeholder="password" required="" pattern=".{4,}"/><br>
+					<input type="file" id="img" name="img" accept="image/*">
+					<input type="submit" value="Submit">
+				</form>	
+			</div>	
+		</div>
+	<!-- //banner --> 
+	 <!--copyright-->
+
+	<!--//copyright-->
+	</div>
+</div>
+ </body>
+</html>
